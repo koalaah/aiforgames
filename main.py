@@ -59,13 +59,10 @@ if __name__ == '__main__':
     # add one agent
     world.agents.append(Agent(world, 20, 1, 'hide'))
 
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
-    world.obstacles.append(Obstacle(world))
+    # add obstacles
+    for i in range(5):
+        world.obstacles.append(Obstacle(world))
+
     # unpause the world ready for movement
     world.paused = False
 

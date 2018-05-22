@@ -19,12 +19,8 @@ class World(object):
         self.agents = []
         self.paused = True
         self.show_info = True
-
         self.obstacles = []
-
         self.hiding_spots = []
-
-
 
     def update(self, delta):
         if not self.paused:
@@ -38,9 +34,9 @@ class World(object):
 
     def render(self):
 
-        for hidingspot in self.hiding_spots:
+        for hiding_spot in self.hiding_spots:
             egi.blue_pen()
-            egi.cross(hidingspot, 5)
+            egi.cross(hiding_spot, 5)
 
         for obstacle in self.obstacles:
             obstacle.render()
@@ -106,7 +102,6 @@ class World(object):
         dist_away = obj_radius + dist_from_boundry
 
         to_obj = obstacle.pos - hunter.pos
-
         to_obj.normalise()
 
         return(to_obj * dist_away) + obstacle.pos
