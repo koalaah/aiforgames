@@ -8,5 +8,5 @@ class Obstacle(object):
         self.pos = Vector2D(randrange(world.cx), randrange(world.cy))
 
     def render(self, color=None):
-        egi.red_pen()
-        egi.circle(self.pos, 30)
+        egi.white_pen()
+        egi.circle(self.pos, 40)
